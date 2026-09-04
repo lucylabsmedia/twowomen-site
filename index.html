@@ -6,6 +6,7 @@
   <title>TwoWomen | Mind Management for Women Over Sixty</title>
   <meta name="description" content="Two Women. One Blog. Mind management, spiritual life, movement, nourishment, and joyful community for mature women over sixty." />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -76,7 +77,7 @@
       margin: 0 auto;
     }
 
-    /* Top Utility Bar */
+    /* Announcement Bar */
     .top-bar {
       background-color: var(--bg-accent);
       font-size: 0.88rem;
@@ -87,7 +88,7 @@
       color: var(--brand-primary);
     }
 
-    /* Sticky Navbar */
+    /* Sticky Header */
     header {
       background-color: rgba(250, 248, 245, 0.96);
       backdrop-filter: blur(10px);
@@ -232,7 +233,7 @@
 
     .section-header {
       text-align: center;
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 2.5rem;
     }
 
@@ -383,7 +384,7 @@
       gap: 0.35rem;
     }
 
-    /* About Founders Section */
+    /* About Section */
     .founders-section {
       background-color: var(--bg-accent-soft);
       border-top: 1px solid var(--border-color);
@@ -418,7 +419,7 @@
       color: var(--text-muted);
     }
 
-    /* Store Coming Soon Section */
+    /* Store Section */
     .store-section {
       background-color: var(--bg-surface);
       border-bottom: 1px solid var(--border-color);
@@ -625,7 +626,7 @@
       text-decoration: underline;
     }
 
-    /* Article Modal */
+    /* Modal Reader */
     .article-modal {
       position: fixed;
       top: 0;
@@ -647,7 +648,7 @@
 
     .modal-sheet {
       background: var(--bg-surface);
-      max-width: 800px;
+      max-width: 820px;
       width: 100%;
       max-height: 90vh;
       border-radius: var(--radius-lg);
@@ -799,6 +800,7 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
         <div>
@@ -820,33 +822,35 @@
       </div>
     </section>
 
+    <!-- Blog Section with Categories -->
     <section id="blog">
       <div class="container">
         <div class="section-header">
           <span class="tag-badge">Explore Topics</span>
           <h2>The Blog Spot</h2>
-          <p>Explore articles across our core lifestyle pillars: Mind Management, Spiritual Life, Movement, Food, Rest, and Relationships.</p>
+          <p>From mind management, to how to handle gray hair, to reclaiming routines and holiday joy—explore our complete articles below. Click any post to read the full content.</p>
         </div>
 
         <div class="filter-scroll-wrap">
           <div class="filter-tabs">
             <button class="filter-btn active" onclick="filterCategory('all')">All Posts</button>
-            <button class="filter-btn" onclick="filterCategory('mind-management')">Mind Management</button>
-            <button class="filter-btn" onclick="filterCategory('spiritual-life')">Spiritual Life</button>
             <button class="filter-btn" onclick="filterCategory('exercise-and-movement')">Exercise & Movement</button>
             <button class="filter-btn" onclick="filterCategory('food-and-water')">Food & Water</button>
-            <button class="filter-btn" onclick="filterCategory('sleep')">Sleep</button>
+            <button class="filter-btn" onclick="filterCategory('mind-management')">Mind Management</button>
+            <button class="filter-btn" onclick="filterCategory('spiritual-life')">Spiritual Life</button>
             <button class="filter-btn" onclick="filterCategory('relationships')">Relationships</button>
+            <button class="filter-btn" onclick="filterCategory('sleep')">Sleep</button>
             <button class="filter-btn" onclick="filterCategory('joy')">Joy</button>
           </div>
         </div>
 
         <div class="blog-grid" id="blogPostsGrid">
           
+          <!-- Post 1 (Exercise & Movement / Routine) -->
           <article class="post-card" data-category="exercise-and-movement" onclick="openModal('post-1')">
             <div class="post-thumb">
               <span class="post-stamp">Newest</span>
-              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Morning stretching and routine" />
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80" alt="Morning routine with coffee" />
             </div>
             <div class="post-body">
               <div class="post-date">Jan 8, 2025 · Exercise & Movement</div>
@@ -858,6 +862,7 @@
             </div>
           </article>
 
+          <!-- Post 2 (Relationships / Joy) -->
           <article class="post-card" data-category="relationships" onclick="openModal('post-2')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
@@ -867,13 +872,30 @@
               <div class="post-date">Dec 17, 2024 · Relationships</div>
               <h3 class="post-title">Holiday Gift List for your Besties over 60</h3>
               <p class="post-excerpt">
-                I don't know about you, but boy, this month is truly getting away from me! To be perfectly honest I've not started any Christmas...
+                I don't know about you, but boy, this month is truly getting away from me! To be perfectly honest I've not started any Christmas shopping. To be really honest, I don't even have a list yet!
               </p>
               <div class="read-more-link">Read Full Post &rarr;</div>
             </div>
           </article>
 
-          <article class="post-card" data-category="relationships" onclick="openModal('post-3')">
+          <!-- Post 3 (Joy / Mind Management) -->
+          <article class="post-card" data-category="joy" onclick="openModal('post-3')">
+            <div class="post-thumb">
+              <span class="post-stamp">Archive</span>
+              <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=700&q=80" alt="Warm holiday lights and tea" />
+            </div>
+            <div class="post-body">
+              <div class="post-date">Dec 04, 2024 · Joy</div>
+              <h3 class="post-title">When Christmas Doesn't Feel Like Christmas: Nine Tips to Put the Happy Back in Holidays</h3>
+              <p class="post-excerpt">
+                🎄✨ Feeling a bit "Bah Humbug" this holiday season? We totally understand. The holidays can bring unexpected pressure, loneliness, or memories that make celebration feel complicated...
+              </p>
+              <div class="read-more-link">Read Full Post &rarr;</div>
+            </div>
+          </article>
+
+          <!-- Post 4 (Relationships / Mind Management) -->
+          <article class="post-card" data-category="relationships" onclick="openModal('post-4')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
               <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=700&q=80" alt="Autumn dinner table setting" />
@@ -882,13 +904,14 @@
               <div class="post-date">Nov 18, 2024 · Relationships</div>
               <h3 class="post-title">Thanksgiving 2024: Navigating the Holiday in an Election Year</h3>
               <p class="post-excerpt">
-                Wow! What a year! As the old saying goes, “Unless you've been living under a rock,” I think we can all agree this has been another...
+                Wow! What a year! As the old saying goes, “Unless you've been living under a rock,” I think we can all agree this has been another whirlwind season...
               </p>
               <div class="read-more-link">Read Full Post &rarr;</div>
             </div>
           </article>
 
-          <article class="post-card" data-category="spiritual-life" onclick="openModal('post-4')">
+          <!-- Post 5 (Spiritual Life) -->
+          <article class="post-card" data-category="spiritual-life" onclick="openModal('post-5')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
               <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Calm ocean water at dawn" />
@@ -903,7 +926,8 @@
             </div>
           </article>
 
-          <article class="post-card" data-category="mind-management" onclick="openModal('post-5')">
+          <!-- Post 6 (Mind Management) -->
+          <article class="post-card" data-category="mind-management" onclick="openModal('post-6')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
               <img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=700&q=80" alt="Golden autumn foliage" />
@@ -918,7 +942,8 @@
             </div>
           </article>
 
-          <article class="post-card" data-category="food-and-water" onclick="openModal('post-6')">
+          <!-- Post 7 (Food & Water) -->
+          <article class="post-card" data-category="food-and-water" onclick="openModal('post-7')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
               <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80" alt="Fresh wholesome vegetables and water" />
@@ -933,7 +958,8 @@
             </div>
           </article>
 
-          <article class="post-card" data-category="sleep" onclick="openModal('post-7')">
+          <!-- Post 8 (Sleep) -->
+          <article class="post-card" data-category="sleep" onclick="openModal('post-8')">
             <div class="post-thumb">
               <span class="post-stamp">Archive</span>
               <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80" alt="Comfortable cozy bed linens" />
@@ -948,25 +974,11 @@
             </div>
           </article>
 
-          <article class="post-card" data-category="joy" onclick="openModal('post-8')">
-            <div class="post-thumb">
-              <span class="post-stamp">Archive</span>
-              <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=700&q=80" alt="Laughter and warmth among friends" />
-            </div>
-            <div class="post-body">
-              <div class="post-date">Aug 18, 2024 · Joy</div>
-              <h3 class="post-title">Unapologetic Joy: Laughing More and Worrying Less</h3>
-              <p class="post-excerpt">
-                Joy isn't something that happens by accident; it's a decision we make each morning. How Beth and I prioritize laughter, fun, and lightness...
-              </p>
-              <div class="read-more-link">Read Full Post &rarr;</div>
-            </div>
-          </article>
-
         </div>
       </div>
     </section>
 
+    <!-- About Founders Section -->
     <section id="about" class="founders-section">
       <div class="container founders-grid">
         <div class="founders-image-container">
@@ -974,18 +986,25 @@
         </div>
 
         <div>
-          <span class="tag-badge">Our Story</span>
+          <span class="tag-badge">Our Mission</span>
           <h2>Meet Penny and Beth</h2>
+          <p style="margin-bottom: 1rem; font-weight: 600; color: var(--brand-primary);">
+            We're two women of color, both over 60, connecting with other women in and around our age group.
+          </p>
           <div class="founders-quote">
             <p>
-              Actor Meryl Streep said the formula for happiness is being yourself in the most vivid way you possibly can. We totally agree. It's not about changing who we are. It's about the willingness to continue to grow. That's what excites us. You too?
+              TwoWomen is not out to change the world. Nope. Earth-shattering change is not our mission. Instead, at TwoWomen, we're all about helping make your current world richer, less stressful, more playful.
             </p>
           </div>
-          <button type="button" class="btn btn-primary" onclick="openModal('about-story')">READ OUR FULL STORY</button>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+            Through our blog we chat about every topic that's important to you; from the practical to the possible, the serious to the silly. And we don't shy away from conversations that might be a bit awkward, delicate, or difficult.
+          </p>
+          <button type="button" class="btn btn-primary" onclick="openModal('about-story')">READ OUR FULL STORY & BIOS</button>
         </div>
       </div>
     </section>
 
+    <!-- TwoWomen Store Coming Soon Section -->
     <section id="store" class="store-section">
       <div class="container">
         <div class="store-card">
@@ -993,16 +1012,16 @@
             <span class="store-badge">Coming Soon</span>
             <h2>The TwoWomen Store</h2>
             <p>
-              We are curating a collection of mindful lifestyle essentials, inspirational journals, wellness accessories, and gifts chosen specifically for mature women building intentional days.
+              We are curating a collection of mindful lifestyle essentials, inspirational journals, wellness accessories, and thoughtful gifts chosen specifically for mature women building intentional, beautiful days.
             </p>
             <ul class="store-features">
               <li>
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Mind management journals & guided reflection books
+                Mind management journals & daily gratitude workbooks
               </li>
               <li>
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Curated comfort wraps, teas, and rest rituals
+                Comfort wraps, artisanal herbal teas, and rest rituals
               </li>
               <li>
                 <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
@@ -1021,13 +1040,14 @@
 
           <div class="store-preview-visual">
             <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Notebook, tea cup, and peaceful lifestyle accessories" style="border-radius: var(--radius-sm); margin-bottom: 1rem;" />
-            <h4 style="font-size: 1.2rem; margin-bottom: 0.3rem;">Curated for You</h4>
+            <h4 style="font-size: 1.2rem; margin-bottom: 0.3rem;">Curated with Love</h4>
             <p style="font-size: 0.9rem; color: var(--text-muted);">Thoughtful goods for mind, body, and spirit.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Newsletter Section -->
     <section id="newsletter" class="newsletter-section">
       <div class="container">
         <div class="newsletter-box">
@@ -1047,6 +1067,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-content">
       <ul class="footer-links">
@@ -1075,6 +1096,7 @@
     </div>
   </footer>
 
+  <!-- Reader Modal -->
   <div id="articleModal" class="article-modal" onclick="if(event.target === this) closeModal()">
     <div class="modal-sheet">
       <button class="modal-close-btn" onclick="closeModal()" aria-label="Close dialog">&times;</button>
@@ -1087,24 +1109,31 @@
     </div>
   </div>
 
+  <!-- Content Templates: Real Word-for-Word Articles & Authentic Bios -->
+
   <template id="post-1">
     <div data-title="Jumping into January: 8 Tips to Reclaim Your Routine After the Holidays"></div>
     <div data-date="Jan 8, 2025 · Exercise & Movement"></div>
     <div data-img="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"></div>
     <div data-content>
-      <p>JUMP INTO JANUARY! 🎉🎈 I hope you had a fun holiday break. I certainly did. We spent the entire holiday here in Austin, allowing ourselves plenty of time to rest, reconnect with family, and reflect on the year gone by.</p>
-      <p>Transitioning from the festive sparkle of holiday gatherings back into normal daily rhythm isn't always effortless—especially for our mindsets and physical habits. Here are our 8 practical tips to gently reclaim your movement and daily routine:</p>
+      <p>JUMP INTO JANUARY! 🎉🎈</p>
+      <p>I hope you had a fun holiday break. I certainly did. We spent the entire holiday here in Austin, allowing plenty of time to truly relax.</p>
+      <p>Don't laugh, but one day I watched six Hallmark-type movies, all while lying on the sofa, head resting on a fluffy pillow, munching freshly popped, buttery popcorn. Heaven! 😊</p>
+      <p>We also met up with friends at some great parties and open houses. Just enough of them to break up our days and the evening parties gave us an excuse to sleep in late the next morning.</p>
+      <p>Of course, Beth and I live states away from each other, but I can report she also enjoyed her holiday break. She has the added pleasure of celebrating her birthday just days after the first of the year when most of us are still on break. When I asked her how her holiday and birthday were, she answered enthusiastically, “Fabulous!!” She had a chance to relax and she spent all her special days with good friends and her grown kids. Ah, yes, the holidays were wonderful.</p>
+      <p>And now we're back to work. We're back to schedules. We're making resolutions, filling up calendars. We're getting calls from unrecognized numbers. We're scheduling annual appointments. We have a “to-do” list again. And if you're anything like me, the routines and habits you adhered to so very effortlessly before the holidays now feel like somebody else's schedule.</p>
+      <p>Here are our 8 tips to gently step back into our rhythm:</p>
       <ol>
-        <li><strong>Start with Grace:</strong> Don't expect your routine to flip like a light switch on day one. Ease yourself back into normal hours gradually.</li>
-        <li><strong>Gentle Daily Walking:</strong> A 20-minute brisk walk in fresh air reactivates lymphatic flow and clears winter brain fog.</li>
-        <li><strong>Restore Your Sleep Window:</strong> Bring bedtime forward 15 minutes each evening until you're back on your restorative schedule.</li>
-        <li><strong>Hydrate First Thing:</strong> The post-holiday salt and sugar slump is best cured with warm lemon water every morning.</li>
-        <li><strong>Clear One Surface a Day:</strong> Don't tackle the whole house at once. A clear kitchen island or clean bedside table creates instant mental calm.</li>
-        <li><strong>Refill the Pantry with Wholesome Staples:</strong> Trade holiday treats for hearty soups, fresh greens, and citrus fruits.</li>
-        <li><strong>Protect Your Quiet Time:</strong> Safeguard 15 minutes in the morning before emails or phones to read, meditate, or pray.</li>
-        <li><strong>Set Monthly Intentions, Not Heavy Resolutions:</strong> Choose a theme for January (like "Gentleness" or "Renewal") rather than punitive demands.</li>
+        <li><strong>START SMALL:</strong> Don't overwhelm yourself thinking you need to execute the perfect high dive into the new year. Jump into the shallow end and get used to the water. Before you know it, you'll be back swimming with the best of them.</li>
+        <li><strong>START WITH YOUR "HAPPY HABITS":</strong> We value all of our habits, but some are more fun than others. As we pack away 2024 and begin building 2025, start with your most enjoyable habits. For instance, for me keeping track of gratitude is a “happy habit.” What are some of yours?</li>
+        <li><strong>PLAN YOUR DAYS:</strong> It might be helpful as you ease into the new year to plan at least part of your day. If you lost the habit of making your bed every day during the holidays, put it back into your daily routine. It always makes us feel accomplished when we can cross things we value off our list. It proves we're on the right track again.</li>
+        <li><strong>PRIORITIZE SLEEP:</strong> Going back to our regular sleeping pattern seems to help. During the holidays we're all over the place – staying up late, napping in the easy chair in the afternoon, sleeping in late. Time to remember we feel our best – more energized when we adhere to a sleep schedule.</li>
+        <li><strong>EMBRACE THE POWER OF MORNING LIGHT:</strong> While doing the research for this blog post I noticed this tip to restart and ease back into our supportive habits. Simply spending a few minutes outside in the morning helps to reset our body's natural rhythms and boosts our mood.</li>
+        <li><strong>CHRISTMAS CLUTTER — IS THE CHRISTMAS TREE STILL IN THE LIVING ROOM?</strong> It might be time to take it down. Consider packing away the holiday decorations. I'll personally confess to having gift bags in our bedroom, next to a couple of gifts I still need to wrap and deliver. See the problem? It's difficult to think clearly when you're surrounded by clutter. I can vouch for that.</li>
+        <li><strong>WHAT ABOUT “COOKIE CLUTTER?”</strong> I'd suggest baby steps here, but it's no doubt time to get back to nutritional eating. A return to simple, healthy meals that supply us with steady energy will support getting us back on track with the rest of our reliable, healthy habits.</li>
+        <li><strong>PROGRESS OVER PERFECTION:</strong> We were in “holiday mode” for at least a couple of months. Don't expect too much too soon. And above all, BE KIND TO YOURSELF — Accept that it might take time to fully get back on track. Celebrate small wins instead of focusing on what you haven't done.</li>
       </ol>
-      <p>Here’s to moving through January with intention, comfort, and good health!</p>
+      <p>HAPPY 2025! Let's greet the New Year with expectation and optimism. Practice self-compassion and personal forgiveness. And above all, hang around good people and live fully every day.</p>
     </div>
   </template>
 
@@ -1113,173 +1142,10 @@
     <div data-date="Dec 17, 2024 · Relationships"></div>
     <div data-img="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=900&q=80"></div>
     <div data-content>
-      <p>I don't know about you, but boy, this month is truly getting away from me! To be perfectly honest I've not started any Christmas shopping until this week. When shopping for long-time friends who already have full homes, thoughtful comfort and shared memories mean everything.</p>
-      <p>Here are a few favorite, meaningful gift ideas that don't add clutter:</p>
+      <p>I don't know about you, but boy, this month is truly getting away from me! To be perfectly honest I've not started any Christmas shopping. To be really honest, I don't even have a list yet!</p>
+      <p>After all, who would we be without our girlfriends!? If you're feeling a little behind and could use not only a word of encouragement but a list of gift ideas, this is the blog post for you! Full of general suggestions, and specific gift ideas along with links, we think you'll find the perfect gift for your gal pals.</p>
       <ul>
-        <li><strong>The Ultimate Cashmere Wrap:</strong> Soft, lightweight warmth for reading on the couch or dining out in chilly restaurants.</li>
-        <li><strong>Artisanal Herbal Tea Blends & Honey:</strong> A luxury collection of loose-leaf chamomile and lavender teas for evening wind-down.</li>
-        <li><strong>Custom Photo Keepsake Books:</strong> A small curated album documenting recent trips or precious memories spent together.</li>
-        <li><strong>High-End Hand Creams:</strong> Deeply hydrating balms scented with orange blossom or shea butter that feel like a daily luxury.</li>
-        <li><strong>The Gift of Time:</strong> A scheduled lunch date, museum afternoon, or theatre ticket where you simply get to be together.</li>
-      </ul>
-      <p>Remember: at this stage in life, what matters most is the intention and love wrapped within the gesture.</p>
-    </div>
-  </template>
-
-  <template id="post-3">
-    <div data-title="Thanksgiving 2024: Navigating the Holiday in an Election Year"></div>
-    <div data-date="Nov 18, 2024 · Relationships"></div>
-    <div data-img="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>Wow! What a year! As the old saying goes, “Unless you've been living under a rock,” I think we can all agree this has been another whirlwind season of news, opinions, and spirited discussions across every corner of the country.</p>
-      <p>Gathering around the family table during an election year can test anyone's patience. But as women with years of perspective, we have the unique power to set the emotional tone in our homes:</p>
-      <blockquote>"Peace is not the absence of disagreement, but the presence of grace and mutual respect."</blockquote>
-      <p>Before welcoming guests, agree on a simple mindset rule: keep gratitude at center stage. Steer conversations toward family memories, recipes, gratitude, and what connects us rather than what divides us. If conversations heat up, a lighthearted subject change or a walk outdoors works wonders. Guard your peace of mind and make love the centerpiece of your holiday table.</p>
-    </div>
-  </template>
-
-  <template id="post-4">
-    <div data-title="The Power of Living in the Present Moment"></div>
-    <div data-date="Oct 23, 2024 · Spiritual Life"></div>
-    <div data-img="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>There is a bible verse that most of us are aware of but few of us truly follow (including me.) The Bible verse says, “Tomorrow is not promised.” How often do we let worry over tomorrow rob us of the sweetness right in front of our eyes today?</p>
-      <p>Mind management and spiritual peace in our sixties require deliberately practicing presence. When you sip your morning tea, taste it. When you listen to your friend laugh on the telephone, absorb it without checking your clock. The yesterday is gone and tomorrow hasn't arrived; all we are ever handed is this sacred current moment.</p>
-      <p>Give yourself permission today to put down yesterday's regrets and tomorrow's checklist. Breathe in, look around, and enjoy the right now.</p>
-    </div>
-  </template>
-
-  <template id="post-5">
-    <div data-title="Avoiding the mental pitfalls of Autumn: In Six Steps"></div>
-    <div data-date="Oct 9, 2024 · Mind Management"></div>
-    <div data-img="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>Each season has its separate and unique personality. Ready or not Winter confidently marches into our lives with dramatic weather shifts, shorter daylight hours, and cooler winds that naturally tempt us to isolate.</p>
-      <p>To avoid slipping into seasonal gloom or mental ruts, here are six practical steps to stay vibrant and energized throughout the fall:</p>
-      <ol>
-        <li><strong>Catch the Morning Light:</strong> Step outside within an hour of waking to catch natural daylight and keep your circadian rhythm in balance.</li>
-        <li><strong>Warm Your Nourishment:</strong> Transition to grounding, warm meals—roasted root vegetables, slow-cooked stews, and herbal bone broths.</li>
-        <li><strong>Prioritize Social Connection:</strong> Don't let cold evenings keep you secluded; arrange regular coffee dates and phone check-ins.</li>
-        <li><strong>Establish an Indoor Project:</strong> Pick up that book series, learn water coloring, or reorganize family albums.</li>
-        <li><strong>Practice Daily Gratitude Journaling:</strong> Write down three distinct blessings every night before turning out the lamp.</li>
-        <li><strong>Stay Physically Active:</strong> Keep your joints mobile with gentle stretching or indoor yoga when the weather turns brisk.</li>
-      </ol>
-      <p>Autumn is a time of harvest and transition. Embellish it with warm comforts and keep your spirit inspired.</p>
-    </div>
-  </template>
-
-  <template id="post-6">
-    <div data-title="Hydration, Wholesome Eating, and Fueling Your Sixties"></div>
-    <div data-date="Sep 24, 2024 · Food & Water"></div>
-    <div data-img="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>As mature women, our hydration reflex naturally diminishes, meaning we often don't register thirst until our energy levels are already dipped. Nutrition past sixty isn't about restrictive diets—it's about fueling mental clarity, gut health, and radiant vitality.</p>
-      <p>Our core food & hydration pillars:</p>
-      <ul>
-        <li><strong>The Morning Water Ritual:</strong> Drink 16 ounces of room-temperature or warm water with lemon before your morning coffee.</li>
-        <li><strong>Color on Every Plate:</strong> Deep leafy greens, vibrant berries, and root vegetables packed with protective antioxidants.</li>
-        <li><strong>Mindful Savoring:</strong> Eating slowly, away from television screens, turning meals into restorative pauses during the day.</li>
-        <li><strong>Electrolytes & Herbal Teas:</strong> Incorporating mineral broths and unrefined sea salt to support steady cellular hydration.</li>
-      </ul>
-      <p>Nourishing your body with clean food and pure water is one of the most loving mind management decisions you can make.</p>
-    </div>
-  </template>
-
-  <template id="post-7">
-    <div data-title="Guarding Your Sleep: Conquering Restlessness Past Sixty"></div>
-    <div data-date="Sep 04, 2024 · Sleep"></div>
-    <div data-img="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>Hormonal shifts, racing thoughts, or changes in daily circadian cues often make continuous eight-hour sleep elusive in our sixties. Yet restful sleep is the very foundation upon which all emotional resilience sits.</p>
-      <p>Here is our sanctuary checklist for restorative sleep:</p>
-      <ol>
-        <li><strong>Digital Sunset at 8:30 PM:</strong> Trade blue-light phone scrolling for paper books or peaceful audio.</li>
-        <li><strong>A Cool, Dark Bedroom:</strong> Keep your room temperature between 65-68°F to encourage deep REM stages.</li>
-        <li><strong>Magnesium & Chamomile:</strong> A warm evening infusion to naturally relax muscular tension.</li>
-        <li><strong>The "Brain Dump" Pad:</strong> Keep a notepad on your nightstand to write down tomorrow's thoughts so your brain can let them go.</li>
-      </ol>
-      <p>Treat your rest as sacred—it restores your energy and sharpens your spirit for tomorrow.</p>
-    </div>
-  </template>
-
-  <template id="post-8">
-    <div data-title="Unapologetic Joy: Laughing More and Worrying Less"></div>
-    <div data-date="Aug 18, 2024 · Joy"></div>
-    <div data-img="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>Too often, maturity is associated with seriousness, caution, and declining energy. We refuse that narrative. Joy is an intentional practice, and in our sixties, we have earned the right to laugh loudly, take chances, and celebrate everyday triumphs.</p>
-      <blockquote>"Joy does not simply happen to us. We have to choose joy and keep choosing it every single day."</blockquote>
-      <p>Whether it’s spontaneous dancing in the kitchen while cooking dinner, planning day trips with friends, or simply laughing at ourselves when we forget where we placed our spectacles—joy is the best medicine for the soul. Let yourself play, laugh, and celebrate the gift of this vibrant season.</p>
-    </div>
-  </template>
-
-  <template id="about-story">
-    <div data-title="About TwoWomen: Mind Management for Women Over Sixty"></div>
-    <div data-date="About Penny & Beth"></div>
-    <div data-img="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80"></div>
-    <div data-content>
-      <p>Welcome! We're Penny and Beth; two 60+ women who created TwoWomen as an authentic, comforting space for mature women navigating daily life, mind management, and personal renewal.</p>
-      <blockquote>"Actor Meryl Streep said the formula for happiness is being yourself in the most vivid way you possibly can. We totally agree. It's not about changing who we are. It's about the willingness to continue to grow. That's what excites us. You too?"</blockquote>
-      <p>We speak candidly about the good, the bad, and the unusual of life past sixty. Our philosophy centers on holistic mind management supported by our core daily pillars:</p>
-      <ul>
-        <li><strong>Mind Management:</strong> Guarding our thoughts, easing worry, and maintaining positive focus.</li>
-        <li><strong>Spiritual Life:</strong> Deepening our faith, practicing presence, and living with grace.</li>
-        <li><strong>Exercise & Movement:</strong> Honoring our bodies with gentle, consistent daily motion.</li>
-        <li><strong>Food & Water:</strong> Fueling ourselves with pure hydration and nourishing meals.</li>
-        <li><strong>Sleep:</strong> Cultivating calm evening wind-downs and restorative rest.</li>
-        <li><strong>Relationships:</strong> Fostering deep friendships and mutual family respect.</li>
-        <li><strong>Joy:</strong> Embracing humor, laughter, and unapologetic fun in our mature years.</li>
-      </ul>
-      <p>Society often suggests that women over sixty should step aside. We believe this chapter is our most vivid and grounded yet. Thank you for walking this road with us!</p>
-    </div>
-  </template>
-
-  <script>
-    function filterCategory(category) {
-      const cards = document.querySelectorAll('.post-card');
-      const buttons = document.querySelectorAll('.filter-btn');
-
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    function openModal(templateId) {
-      const template = document.getElementById(templateId);
-      if (!template) return;
-
-      const title = template.content.querySelector('[data-title]').getAttribute('data-title');
-      const date = template.content.querySelector('[data-date]').getAttribute('data-date');
-      const img = template.content.querySelector('[data-img]').getAttribute('data-img');
-      const content = template.content.querySelector('[data-content]').innerHTML;
-
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalDate').textContent = date;
-      document.getElementById('modalImg').src = img;
-      document.getElementById('modalBody').innerHTML = content;
-
-      document.getElementById('articleModal').classList.add('active');
-      document.body.classList.add('modal-open');
-    }
-
-    function closeModal() {
-      document.getElementById('articleModal').classList.remove('active');
-      document.body.classList.remove('modal-open');
-    }
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    });
-  </script>
-
-</body>
-</html>
+        <li><strong>Reading Glasses:</strong> Do you happen to have a friend who can never find her glasses? You know, the one that's always squinting at the menu or moving her phone back and forth to find the best distance to be able to read it? How about a gift of reading glasses? She'll thank you and so will her tired eyes! (Note: I'd pick a mid-range magnification.)</li>
+        <li><strong>Pill Holder Key Chain:</strong> I think we all can relate to this one. We're out of the house for a bit when we realize we've forgotten to bring our mid-day pills along. The big challenge is to remember to take them when we get back to the house. With this nifty little gadget, she'll simply pop the pills in the holder and your pal will stay right on schedule.</li>
+        <li><strong>eLearning:</strong> Did you know Masterclass is on sale during the holidays? What a perfect gift for your curious, lifelong learner friend! You'd no doubt make her day with this one or one of the other learning centers. In the eLearning space, there's lots to choose from. Take a trip online and you'll find the perfect platform.</li>
+        <li><strong>Car Cups:</strong> Yeti, Stanley, who among us doesn't like (and need) more car cups. Practical, yet usually a little on the spendy side they make a great gift for your girlfriend who spends more time in her car than on her couch. Or one that counts her cups. You of course can find them in-store (Target for example.) Amazon has a wide variety. Or you could go directly to the brand's website. My favorite brand is Rifle Paper Company and its collaboration with Corkcicle. Beautiful cups, car cups, wine cups allNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
