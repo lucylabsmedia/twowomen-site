@@ -103,18 +103,14 @@
     }
 
     .brand-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: var(--text-main);
       display: flex;
       align-items: center;
-      gap: 0.6rem;
     }
 
     .brand-logo img {
-      max-height: 44px;
+      max-height: 48px;
       width: auto;
+      object-fit: contain;
     }
 
     nav ul {
@@ -769,8 +765,7 @@
   <header>
     <div class="container nav-wrapper">
       <a href="#" class="brand-logo" aria-label="TwoWomen Logo">
-        <img src="assets/logo.png" onerror="this.style.display='none'" alt="the twowomen logo" />
-        <span>TwoWomen</span>
+        <img src="assets/logo.png" alt="TwoWomen - A Mature Women's Blog" />
       </a>
 
       <nav aria-label="Main Navigation">
@@ -805,7 +800,7 @@
         </div>
 
         <div class="hero-card">
-          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80" alt="Two mature women smiling together" />
+          <img src="assets/hero.jpg" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80'" alt="Two mature women smiling together" />
         </div>
       </div>
     </section>
@@ -838,7 +833,7 @@
     <section id="about" class="founders-section">
       <div class="container founders-grid">
         <div class="founders-image-container">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="the two african-american women who started the blog" class="founders-image" />
+          <img src="assets/founders.jpg" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'" alt="Penny and Beth, founders of TwoWomen" class="founders-image" />
         </div>
 
         <div>
@@ -971,7 +966,6 @@
 
       let postsData = [];
 
-      // Fetch posts from external JSON
       fetch('posts.json')
         .then(response => {
           if (!response.ok) throw new Error('Network error loading posts.json');
@@ -986,7 +980,6 @@
           blogGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--brand-primary);">Unable to load posts catalog. Please ensure posts.json is present.</p>';
         });
 
-      // Render Post Cards
       function renderPosts(posts) {
         blogGrid.innerHTML = '';
         posts.forEach(post => {
@@ -1013,7 +1006,6 @@
         });
       }
 
-      // Filter handling
       filterButtons.forEach(button => {
         button.addEventListener('click', function () {
           filterButtons.forEach(b => b.classList.remove('active'));
@@ -1033,7 +1025,6 @@
         });
       });
 
-      // Modal Open Logic
       function openArticleModal(post) {
         document.getElementById('modalTitle').textContent = post.title;
         document.getElementById('modalDate').textContent = `${post.date} · ${post.categoryLabel}`;
@@ -1049,14 +1040,13 @@
         document.body.classList.remove('modal-open');
       }
 
-      // About Modal Trigger
       if (openAboutBtn) {
         openAboutBtn.addEventListener('click', function () {
           openArticleModal({
             title: "About TwoWomen: Mind Management for Women Over Sixty",
             date: "About Us",
             categoryLabel: "Penny & Beth",
-            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
+            image: "assets/founders.jpg",
             content: [
               "<p>Welcome! We're Penny and Beth; two 60+ women who created TwoWomen as an authentic, comforting space for mature women navigating daily life, mind management, and personal renewal.</p>",
               "<blockquote>'Actor Meryl Streep said the formula for happiness is being yourself in the most vivid way you possibly can. We totally agree. It's not about changing who we are. It's about the willingness to continue to grow. That's what excites us. You too?'</blockquote>",
